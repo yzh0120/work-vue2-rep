@@ -1,0 +1,45 @@
+/* 设置容器高度*************************************/
+
+.el-header {
+    height: auto !important;
+    padding: 0 !important;
+}
+/*背景颜色 不重要**************************************/
+.el-main {
+		font-size: 14px;
+		background-color: $elMainBgc;
+		#app_main{
+			background-color: $elMainBgc;
+		}
+}
+.el-header {
+}
+.el-container {
+}
+.el-aside {
+	display: flex;//没有侧边栏   返回就删
+	flex-direction: column;//没有侧边栏     返回就删
+}
+
+// 内部外层布局
+.app_main{
+    height: 100%;
+    width: 100%;
+    // position: relative;
+    overflow: hidden;//transition
+    //page组件 的内边距
+	>.el-scrollbar{
+		>.el-scrollbar__wrap.scrollbarPage{
+			>.el-scrollbar__view{
+				padding: $normal_spacing calc(#{$normal_spacing} * 1.2);//margin: calc(#{$normal_spacing} / 1.5) $normal_spacing;
+			}
+		}
+		// >.el-scrollbar__wrap.scrollbarTablePage{
+		// 	>.el-scrollbar__view{
+		// 		height: 100%;
+		// 		// background-color: forestgreen;
+		// 	}
+		// }
+	}	
+	
+}
