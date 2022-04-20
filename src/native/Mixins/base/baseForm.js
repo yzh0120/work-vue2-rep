@@ -100,6 +100,13 @@ export default {
 						}
 					}
 				})
+
+				
+				if (formInfo.dom) {
+					formInfo.formDOM.clearValidate(fieldValue)
+				} else if (formInfo.formDOM) { 
+					formInfo.formDOM.clearValidate(fieldValue)
+				}
 			}else{
 				this.$message.error("_set 值错误")
 			}
